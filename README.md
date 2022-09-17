@@ -19,3 +19,28 @@ yarn start
 ```
 
 Open http://localhost:3000 to see your app.
+
+
+
+
+
+Resources
+
+This project was found on Codesandbox via this github page:
+https://github.com/algolia/react-instantsearch
+org sandbox: https://codesandbox.io/s/8rpf2
+
+
+Data structure
+{
+  name: "",
+  description: "",
+  brand: "",
+  categories: [
+    ""
+  ],
+  price: number,
+  image: "",
+  popularity: number,
+  objectID: ""
+}
