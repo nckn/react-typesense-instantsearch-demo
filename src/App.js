@@ -14,10 +14,10 @@ import PropTypes from 'prop-types';
 import './App.css';
 
 // Mine
-const searchClient = algoliasearch('WWCUAY5GUM', '9cb1b6943b43bd5b257fc77f6d3ea5a8');
+// const searchClient = algoliasearch('WWCUAY5GUM', '9cb1b6943b43bd5b257fc77f6d3ea5a8');
 
 // Org
-// const searchClient = algoliasearch('latency', '6be0576ff61c053d5f9a3225e2a90f76');
+const searchClient = algoliasearch('latency', '6be0576ff61c053d5f9a3225e2a90f76');
 
 function App() {
   return (
@@ -35,10 +35,10 @@ function App() {
       </header>
 
       <div className="container">
-        {/* Org */}
-        {/* <InstantSearch searchClient={searchClient} indexName="instant_search"> */}
         {/* Mine */}
-        <InstantSearch searchClient={searchClient} indexName="dev_konradstudio">
+        {/* <InstantSearch searchClient={searchClient} indexName="dev_konradstudio"> */}
+        {/* Org */}
+        <InstantSearch searchClient={searchClient} indexName="instant_search">
           <Configure hitsPerPage={8} />
           <div className="search-panel">
             <div className="search-panel__filters">
@@ -70,32 +70,32 @@ function App() {
 function Hit(props) {
   
   // Mine
-  return (
-    <article>
-      <img src={props.hit.image} align="left" alt={props.hit.name} />
-      <h1>
-        <Highlight attribute="name" hit={props.hit} />
-        {props.hit.name}
-      </h1>
-      <p>
-        <Highlight attribute="description" hit={props.hit} />
-        {props.hit.description}
-      </p>
-    </article>
-  );
-
-  // Org
   // return (
   //   <article>
   //     <img src={props.hit.image} align="left" alt={props.hit.name} />
   //     <h1>
   //       <Highlight attribute="name" hit={props.hit} />
+  //       {props.hit.name}
   //     </h1>
   //     <p>
   //       <Highlight attribute="description" hit={props.hit} />
+  //       {props.hit.description}
   //     </p>
   //   </article>
   // );
+
+  // Org
+  return (
+    <article>
+      <img src={props.hit.image} align="left" alt={props.hit.name} />
+      <h1>
+        <Highlight attribute="name" hit={props.hit} />
+      </h1>
+      <p>
+        <Highlight attribute="description" hit={props.hit} />
+      </p>
+    </article>
+  );
 }
 
 Hit.propTypes = {
