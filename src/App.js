@@ -74,7 +74,7 @@ function Hit(props) {
     <article>
       <img src={props.hit.image} align="left" alt={props.hit.name} />
       <h1>
-        {/* <Highlight attribute="name" hit={props.hit} /> */}
+        <Highlight attribute="name" hit={props.hit} />
         {props.hit.name}
       </h1>
       <p>
